@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // encapsulation using arrays, creates multidimensional array chain
+    var myArray = [[[]]]; // an empty array, inside an empty array, inside an empty array
+
+    /* Here is an example of encapsulation using functions: an empty function inside an empty function inside an empty function. */
+    var myFunction = function () {
+        // empty
+        var myFunction = function () {
+            // empty
+            var myFunction = function () {
+                // empty
+            };
+        };
+    };
+
+    // we can get crazy and mix and match too
+    var foo = [{ foo: [{ bar: { say: function () { return 'hi'; } }}]}];
+    console.log(foo[0].foo[0].bar.say()); // logs 'hi'
+
+</script></body></html>

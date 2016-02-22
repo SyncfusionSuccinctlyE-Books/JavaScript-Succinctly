@@ -1,0 +1,11 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var add = function (x, y) {
+        // If the parameters are not numbers, return error.
+        if (typeof x !== 'number' || typeof y !== 'number') { return 'pass in numbers'; }
+        return x + y;
+    }
+    console.log(add(3, 3)); // logs 6
+    console.log(add('2', '2')); // logs 'pass in numbers'
+
+</script></body></html>

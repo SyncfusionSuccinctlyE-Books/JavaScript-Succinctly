@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var x = false;
+    var foo = function () {
+        var x = false;
+        bar = function () {
+            var x = true;
+            console.log(x); // local x is first in the scope so it shadows the rest 
+        } ();
+    }
+
+    foo(); // logs true
+
+</script></body></html>

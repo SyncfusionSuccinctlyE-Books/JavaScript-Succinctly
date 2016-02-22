@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var price1 = 10;
+    var price2 = 10;
+    var price3 = new Number('10'); // a complex numeric object because new was used
+    var price4 = price3;
+
+    console.log(price1 === price2); // logs true
+
+    /* logs false because price3 contains a complex number object and price 1 is a primitive value */
+    console.log(price1 === price3);
+
+    // logs true because complex values are equal by reference, not value
+    console.log(price4 === price3);
+
+    // what if we update the price4 variable to contain a primitive value?
+    price4 = 10;
+
+    console.log(price4 === price3); // logs false: price4 is now primitive rather than complex
+
+</script></body></html>

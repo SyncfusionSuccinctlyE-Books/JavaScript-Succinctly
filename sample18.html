@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var myObject = {};
+
+    var copyOfMyObject = myObject; // not copied by value, just the reference is copied
+
+    myObject.foo = 'bar'; // manipulate the value stored in myObject
+
+    /* Now if we log myObject & copyOfMyObject, they will have a foo property because they reference the same object. */
+    console.log(myObject, copyOfMyObject); // logs 'Object { foo="bar"} Object { foo="bar"}'
+
+</script></body></html>

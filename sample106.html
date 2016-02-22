@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var myObject = {};
+
+    var myFunction = function (param1, param2) {
+        // set via apply(), this points to myObject when function is invoked
+        this.foo = param1;
+        this.bar = param2;
+        console.log(this) // logs Object {foo = 'foo', bar = 'bar'}
+    };
+
+    myFunction.apply(myObject, ['foo', 'bar']); // invoke function, set this value
+
+    console.log(myObject) // logs Object {foo = 'foo', bar = 'bar'}
+
+</script></body></html>

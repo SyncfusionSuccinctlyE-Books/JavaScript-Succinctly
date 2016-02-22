@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var Person = function () { };
+
+    // all Person instances inherit a legs, arms, and countLimbs properties
+    Person.prototype.legs = 2;
+    Person.prototype.arms = 2;
+    Person.prototype.countLimbs = function () { return this.legs + this.arms; };
+
+    var chuck = new Person();
+
+    console.log(chuck.countLimbs()); // logs 4
+
+</script></body></html>

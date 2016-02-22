@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    window.foo = 'foo';
+    window.myObject = { foo: 'I am myObject.foo' };
+
+    window.sayFoo = function () {
+        console.log(this.foo);
+    };
+
+    window.myObject.sayFoo = window.sayFoo;
+
+    window.myObject.sayFoo();
+    window.sayFoo();
+
+</script></body></html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var Foo = function Foo() { };
+
+    Foo.prototype.x = 1;
+
+    var FooInstance = new Foo();
+
+    console.log(FooInstance.x); // logs 1, as you think it would
+
+    // now let’s replace/override the prototype object with a new Object() object
+    Foo.prototype = { x: 2 };
+
+    console.log(FooInstance.x); // logs 1, WHAT? Shouldn't it log 2, we just updated prototype
+    /* FooInstance still references the same state of the prototype object that 
+    was there when it was instantiated. */
+
+    // create a new instance of Foo()
+    var NewFooInstance = new Foo();
+
+    // the new instance is now tied to the new prototype object value (i.e. {x:2};)
+    console.log(NewFooInstance.x); // logs 2 
+
+</script></body></html>

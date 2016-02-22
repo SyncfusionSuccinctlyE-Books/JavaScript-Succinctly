@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var addFunction = new Function('num1', 'num2', 'return num1 + num2');
+
+    /* Alternately, a single comma-separated string with arguments can be 
+    the first parameter of the constructor, with the function body following. */
+    var timesFunction = new Function('num1,num2', 'return num1 * num2');
+
+    console.log(addFunction(2, 2), timesFunction(2, 2)); // logs '4 4'
+
+    // versus the more common patterns for instantiating a function
+    var addFunction = function (num1, num2) { return num1 + num2; }; // expression form
+    function addFunction(num1, num2) { return num1 + num2; } // statement form
+    
+</script></body></html>

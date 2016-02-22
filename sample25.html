@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var CustomConstructor = function CustomConstructor() { return 'Wow!'; };
+    var instanceOfCustomObject = new CustomConstructor();
+
+    // logs true
+    console.log(instanceOfCustomObject.constructor === CustomConstructor);
+
+    // returns a reference to CustomConstructor() function
+    // returns 'function() { return 'Wow!'; };'
+    console.log(instanceOfCustomObject.constructor);
+
+</script></body></html>

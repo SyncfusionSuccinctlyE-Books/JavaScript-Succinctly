@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // functions can be sent to, and sent back from, functions
+    var foo = function (f) {
+        return f;
+    }
+
+    var bar = foo(function () { console.log('Hi'); });
+
+    bar(); // logs 'Hi'
+
+</script></body></html>

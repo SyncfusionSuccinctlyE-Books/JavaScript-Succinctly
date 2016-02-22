@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var myArray = ['blue', 'green', 'orange', 'red'];
+    console.log(myArray.length); // logs 4
+    myArray.length = 99;
+    console.log(myArray.length); // logs 99, remember we set the length, not an index
+    myArray.length = 1; // removed all but one value, so index [1] is gone!
+    console.log(myArray[1]); // logs undefined
+
+    console.log(myArray); // logs '["blue"]'
+
+</script></body></html>

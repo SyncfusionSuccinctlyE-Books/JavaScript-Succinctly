@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var addNumbersA = new Function('num1', 'num2', 'return num1 + num2');
+
+    console.log(addNumbersA(2, 2)); // logs 4
+
+    // could also be written the literal way, which is much more common
+    var addNumbersB = function (num1, num2) { return num1 + num2; };
+
+    console.log(addNumbersB(2, 2)); // logs 4
+
+</script></body></html>

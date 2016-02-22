@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var foo = {
+        func1: function (bar) {
+            bar(); // logs window, not foo
+            console.log(this); // the this keyword here will be a reference to foo object
+        }
+    }
+
+    foo.func1(function () { console.log(this) });
+
+</script></body></html>

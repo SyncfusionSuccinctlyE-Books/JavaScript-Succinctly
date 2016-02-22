@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var objectFoo = { same: 'same' };
+    var objectBar = { same: 'same' };
+
+    // logs false, JS does not care that they are identical and of the same object type
+    console.log(objectFoo === objectBar);
+
+    // how complex objects are measured for equality
+    var objectA = { foo: 'bar' };
+    var objectB = objectA;
+
+    console.log(objectA === objectB); // logs true because they reference the same object
+
+</script></body></html>

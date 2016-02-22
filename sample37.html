@@ -1,0 +1,9 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var myArray = [];
+
+    console.log(myArray.foo); // logs undefined
+
+    /* JS will look at Array.prototype for Array.prototype.foo, but it is not there. Then it will look for it at Object.prototype, but it is not there either, so undefined is returned! */
+
+</script></body></html>

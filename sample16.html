@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // Produce primitive values
+    var myNull = null;
+    var myUndefined = undefined;
+    var primitiveString1 = "foo";
+    var primitiveString2 = String('foo'); // did not use new, so we get primitive
+    var primitiveNumber1 = 10;
+    var primitiveNumber2 = Number('10'); // did not use new, so we get primitive
+    var primitiveBoolean1 = true;
+    var primitiveBoolean2 = Boolean('true'); // did not use new, so we get primitive
+
+    /* Access the toString() property method (inherited by objects from object.prototype) to demonstrate that the primitive values are converted to objects when treated like objects. */
+
+    // logs "string string"
+    console.log(primitiveString1.toString(), primitiveString2.toString());
+
+    // logs "number number"
+    console.log(primitiveNumber1.toString(), primitiveNumber2.toString());
+
+    // logs "boolean boolean"
+    console.log(primitiveBoolean1.toString(), primitiveBoolean2.toString());
+
+    /* This will throw an error and not show up in firebug lite, as null and undefined do not convert to objects and do not have constructors. */
+    console.log(myNull.toString());
+    console.log(myUndefined.toString());
+
+</script></body></html>

@@ -1,0 +1,10 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var myObject = {foo: 'value'};
+
+    console.log(myObject.hasOwnProperty('foo')) // logs true
+
+    // vs. a property from the prototype chain
+    console.log(myObject.hasOwnProperty('toString'));  // logs false
+
+</script></body></html>

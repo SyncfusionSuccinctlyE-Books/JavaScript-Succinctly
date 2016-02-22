@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var countUpFromZero = function () {
+        var count = 0;
+        return function () { // return nested child function when countUpFromZero is invoked
+            return ++count; // count is defined up the scope chain, in parent function
+        };
+    } (); // invoke immediately, return nested function
+
+    console.log(countUpFromZero()); // logs 1
+    console.log(countUpFromZero()); // logs 2
+    console.log(countUpFromZero()); // logs 3
+
+</script></body></html>

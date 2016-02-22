@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var myFunction = function () { var foo = 'bar' }; // foo is now in the scope of myFunction()
+
+    var myApp = function () {
+        var run = function () {
+            console.log(foo); // foo is undefined, no longer in the global scope, error occurs
+        } ();
+    }
+
+    myApp();
+
+</script></body></html>

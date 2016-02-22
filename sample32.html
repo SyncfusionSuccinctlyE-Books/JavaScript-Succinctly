@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // create cody Object() object
+    var cody = new Object();
+
+    // setting properties
+    cody.living = true;
+    cody.age = 33;
+    cody.gender = 'male';
+    cody.getGender = function () { return cody.gender; };
+
+    // getting properties
+    console.log(
+        cody.living,
+        cody.age,
+        cody.gender,
+        cody.getGender()
+        ); // logs 'true 33 male male'
+
+    // updating properties, exactly like setting
+    cody.living = false;
+    cody.age = 99;
+    cody.gender = 'female';
+    cody.getGender = function () { return 'Gender = ' + cody.gender; };
+
+    console.log(cody);
+
+</script></body></html>

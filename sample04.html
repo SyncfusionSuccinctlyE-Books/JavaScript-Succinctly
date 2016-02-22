@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // define Person constructor function in order to create custom Person() objects later
+    var Person = function (living, age, gender) {
+        this.living = living;
+        this.age = age;
+        this.gender = gender;
+        this.getGender = function () { return this.gender; };
+    };
+
+    // instantiate a Person object and store it in the cody variable
+    var cody = new Person(true, 33, 'male');
+
+    console.log(cody);
+
+    /* The String() constructor function below, having been defined by JavaScript, has the same pattern. Because the string constructor is native to JavaScript, all we have to do to get a string instance is instantiate it. But the pattern is the same whether we use native constructors like String() or user-defined constructors like Person(). */
+
+    // instantiate a String object stored in the myString variable
+    var myString = new String('foo');
+
+    console.log(myString);
+
+</script></body></html>

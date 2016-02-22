@@ -1,0 +1,9 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // this code only works in browsers that supports __proto__ access
+    Array.prototype.foo = 'foo';
+    var myArray = new Array();
+
+    console.log(myArray.__proto__.foo); // logs foo, because myArray.__proto__ = Array.prototype
+
+</script></body></html>

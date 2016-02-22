@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var foo = 'bar';
+
+    windowRef1 = window;
+    windowRef2 = this;
+
+    console.log(windowRef1, windowRef2); // logs reference to window object
+
+    console.log(windowRef1.foo, windowRef2.foo); // logs 'bar', 'bar'
+
+</script></body></html>

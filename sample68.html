@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var foo = { // window is implied here, window.foo
+        fooMethod: function () {
+            alert('foo' + 'bar'); // window is implied here, window.alert
+            window.alert('foo' + 'bar'); // window is explicitly used, with the same effect
+        }
+    }
+
+    foo.fooMethod(); // window is implied here, window.foo.fooMethod()
+
+</script></body></html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var Foo = function Foo() { };
+
+    Foo.prototype = {}; // replace prototype property with an empty object
+
+    var FooInstance = new Foo();
+
+    console.log(FooInstance.constructor === Foo); // logs false, we broke the reference
+    console.log(FooInstance.constructor); // logs Object(), not Foo()
+
+    // compare to code where we do not replace the prototype value
+
+    var Bar = function Bar() { };
+
+    var BarInstance = new Bar();
+
+    console.log(BarInstance.constructor === Bar); // logs true
+    console.log(BarInstance.constructor); // logs Bar()
+
+</script></body></html>

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // augment the built-in String constructor Function() with the augmentedProperties property
+    String.augmentedProperties = [];
+
+    if (!String.prototype.trimIT) { // if the prototype does not have trimIT() add it
+        String.prototype.trimIT = function () {
+            return this.replace(/^\s+|\s+$/g, '');
+        }
+
+        // now add trimIT string to the augmentedProperties array
+        String.augmentedProperties.push('trimIT');
+    }
+    var myString = '  trim me  ';
+    console.log(myString.trimIT()); // invoke our custom trimIT string method, logs 'trim me'
+
+    console.log(String.augmentedProperties.join()); // logs 'trimIT'
+
+</script></body></html>

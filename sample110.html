@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var foo = 0; // global scope
+    console.log(foo); // logs 0
+
+    var myFunction = function () {
+
+        var foo = 1; // local scope
+
+        console.log(foo); // logs 1
+
+        var myNestedFunction = function () {
+
+            var foo = 2; // local scope
+
+            console.log(foo); // logs 2
+        } ();
+    } ();
+
+    eval('var foo = 3; console.log(foo);'); // eval() scope
+
+</script></body></html>

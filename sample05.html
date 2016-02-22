@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // create a codyA object using the Object() constructor
+
+    var codyA = new Object();
+    codyA.living = true;
+    codyA.age = 33;
+    codyA.gender = 'male';
+    codyA.getGender = function () { return codyA.gender; };
+
+    console.log(codyA); // logs Object {living=true, age=33, gender="male", ...}
+
+    /* The same cody object is created below, but instead of using the native Object() constructor to create a one-off cody, we first define our own Person() constructor that can create a cody object (and any other Person object we like) and then instantiate it with "new". */
+
+    var Person = function (living, age, gender) {
+        this.living = living;
+        this.age = age;
+        this.gender = gender;
+        this.getGender = function () { return this.gender; };
+    };
+
+    var codyB = new Person(true, 33, 'male');
+
+    console.log(codyB); // logs Object {living=true, age=33, gender="male", ...}
+
+</script></body></html>

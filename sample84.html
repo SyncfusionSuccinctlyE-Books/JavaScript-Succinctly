@@ -1,0 +1,8 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var foo = function foo() {
+        console.log(arguments.callee); // logs foo()
+        // callee could be used to invoke recursively the foo function (e.g. arguments.callee())
+    } ();
+
+</script></body></html>

@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    Object.prototype.foo = 'object-foo';
+    Array.prototype.foo = 'array-foo';
+    var myArray = [];
+
+    console.log(myArray.foo); // logs 'array-foo', was found at Array.prototype.foo
+
+    myArray.foo = 'bar';
+
+    console.log(myArray.foo) // logs 'bar', was found at Array.foo
+
+</script></body></html>

@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var Person = function (name) {
+        this.name = name || 'john doe';
+    }
+
+    var cody = Person('Cody Lindley'); // notice we did not use 'new'
+
+    console.log(cody.name); // undefined, the value is actually set at window.name
+
+    console.log(window.name); // logs 'Cody Lindley'
+
+</script></body></html>

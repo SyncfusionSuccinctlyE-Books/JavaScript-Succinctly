@@ -1,0 +1,11 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var falseValue = new Boolean(false);
+
+    console.log(falseValue); // we have a false boolean object, but objects are truthy
+
+    if (falseValue) { // boolean objects, even false boolean objects, are truthy
+        console.log('falseValue is truthy');
+    }
+
+</script></body></html>

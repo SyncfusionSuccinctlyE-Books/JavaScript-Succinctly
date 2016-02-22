@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // boolean object treated like an object
+    var booleanObject = new Boolean(0);
+    console.log(booleanObject.toString()); // logs 'false'
+    console.log(booleanObject['toString']()); // logs 'false'
+
+    // boolean literal/primitive converted to an object when treated as an object
+    var booleanLiteral = false;
+    console.log(booleanLiteral.toString()); // logs 'false'
+    console.log(booleanLiteral['toString']()); // logs 'false'
+    console.log((true).toString()); // logs 'true'
+    console.log(true['toString']()); // logs 'true'
+
+</script></body></html>

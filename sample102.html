@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var myObject = {
+        func1: function () {
+            console.log(this); // logs myObject
+            var func2 = function () {
+                console.log(this) // logs window, and will do so from this point on
+                var func3 = function () {
+                    console.log(this); // logs window, as it’s the head object
+                } ();
+            } ();
+        }
+    }
+
+    myObject.func1();
+
+</script></body></html>

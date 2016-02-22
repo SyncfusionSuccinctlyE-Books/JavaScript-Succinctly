@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // create boolean object using the new keyword and the Boolean() constructor
+    var myBoolean1 = new Boolean(false); // using new keyword
+    console.log(typeof myBoolean1); // logs 'object'
+
+    // create boolean literal/primitive by directly using the number constructor without new
+    var myBoolean2 = Boolean(0); // without new keyword
+    console.log(typeof myBoolean2); // logs 'boolean'
+
+    // create boolean literal/primitive (constructor leveraged behind the scene)
+    var myBoolean3 = false;
+    console.log(typeof myBoolean3); // logs 'boolean'
+    console.log(myBoolean1, myBoolean2, myBoolean3); // logs false false false
+
+</script></body></html>

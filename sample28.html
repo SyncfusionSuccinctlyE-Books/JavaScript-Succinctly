@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // this can be done with any of the native constructors that actual produce an object
+    var myString = new String();
+    var myNumber = new Number();
+    var myBoolean = new Boolean(true);
+    var myObject = new Object();
+    var myArray = new Array();
+    var myFunction = new Function('return 2+2');
+    var myRegExp = new RegExp('\bt[a-z]+\b');
+
+    myString.prop = 'test';
+    myNumber.prop = 'test';
+    myBoolean.prop = 'test';
+    myObject.prop = 'test';
+    myArray.prop = 'test';
+    myFunction.prop = 'test';
+    myRegExp.prop = 'test';
+
+    // logs 'test', 'test', 'test', 'test', 'test', 'test', 'test'
+    console.log(myString.prop, myNumber.prop, myBoolean.prop, myObject.prop, myArray.prop, myFunction.prop, myRegExp.prop);
+
+    // be aware: instance properties do not work with primitive/literal values
+    var myString = 'string';
+    var myNumber = 1;
+    var myBoolean = true;
+
+    myString.prop = true;
+    myNumber.prop = true;
+    myBoolean.prop = true;
+
+    // logs undefined, undefined, undefined
+    console.log(myString.prop, myNumber.prop, myBoolean.prop);
+
+</script></body></html>

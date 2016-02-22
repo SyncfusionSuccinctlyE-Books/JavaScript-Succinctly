@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // create string object using the new keyword and the String() constructor
+    var stringObject = new String('foo');
+    console.log(stringObject); // logs foo {0 = 'f', 1 = 'o', 2 = 'o'}
+    console.log(typeof stringObject); // logs 'object'
+
+    // create string literal/primitive by directly using the String constructor
+    var stringObjectWithOutNewKeyword = String('foo'); // without new keyword
+    console.log(stringObjectWithOutNewKeyword); // logs 'foo'
+    console.log(typeof stringObjectWithOutNewKeyword); // logs 'string'
+
+    // create string literal/primitive (constructor leveraged behind the scene) 
+    var stringLiteral = 'foo';
+    console.log(stringLiteral); // logs foo
+    console.log(typeof stringLiteral); // logs 'string'
+
+</script></body></html>

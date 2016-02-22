@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var objA = { property: 'value' };
+    var pointer1 = objA;
+    var pointer2 = pointer1;
+
+    // update the objA.property, and all references (pointer1 & pointer2) are updated
+    objA.property = null;
+
+    // logs 'null null null' because objA, pointer1, and pointer2 all reference the same object
+    console.log(objA.property, pointer1.property, pointer2.property);
+
+</script></body></html>

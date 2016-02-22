@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    Array.prototype.foo = 'foo'; // all instances of Array() now inherit a foo property
+    var myArray = new Array();
+
+    // trace foo in a verbose way leveraging *.constructor.prototype
+    console.log(myArray.constructor.prototype.foo); // logs foo
+
+    // or, of course, leverage the chain
+    console.log(myArray.foo) // logs foo
+    // uses prototype chain to find property at Array.prototype.foo
+
+</script></body></html>

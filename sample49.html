@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    // create number object using the new keyword and the Number() constructor
+    var numberObject = new Number(1);
+    console.log(numberObject); // logs 1
+    console.log(typeof numberObject) // logs 'object'
+
+    // create number literal/primitive using the number constructor without new
+    var numberObjectWithOutNew = Number(1); // without using new keyword
+    console.log(numberObjectWithOutNew); // logs 1
+    console.log(typeof numberObjectWithOutNew) // logs 'number'
+
+    // create number literal/primitive (constructor leveraged behind the scene)
+    var numberLiteral = 1;
+    console.log(numberLiteral); // logs 1
+    console.log(typeof numberLiteral); // logs 'number'
+
+</script></body></html>

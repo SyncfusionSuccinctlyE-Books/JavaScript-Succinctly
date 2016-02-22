@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html><html lang="en"><body><script>
+
+    var myObject = {};
+
+    // contain properties inside of myObject representing most of the native JavaScript values
+    myObject.myFunction = function () { };
+    myObject.myArray = [];
+    myObject.myString = 'string';
+    myObject.myNumber = 33;
+    myObject.myDate = new Date();
+    myObject.myRegExp = /a/;
+    myObject.myNull = null;
+    myObject.myUndefined = undefined;
+    myObject.myObject = {};
+    myObject.myMath_PI = Math.PI;
+    myObject.myError = new Error('Darn!');
+
+    console.log(myObject.myFunction, myObject.myArray, myObject.myString, myObject.myNumber, myObject.myDate, myObject.myRegExp, myObject.myNull, myObject.myNull, myObject.myUndefined, myObject.myObject, myObject.myMath_PI, myObject.myError);
+
+    /* works the same with any of the complex objects, for example a function */
+    var myFunction = function () { };
+
+    myFunction.myFunction = function () { };
+    myFunction.myArray = [];
+    myFunction.myString = 'string';
+    myFunction.myNumber = 33;
+    myFunction.myDate = new Date();
+    myFunction.myRegExp = /a/;
+    myFunction.myNull = null;
+    myFunction.myUndefined = undefined;
+    myFunction.myObject = {};
+    myFunction.myMath_PI = Math.PI;
+    myFunction.myError = new Error('Darn!');
+
+    console.log(myFunction.myFunction, myFunction.myArray, myFunction.myString, myFunction.myNumber, myFunction.myDate, myFunction.myRegExp, myFunction.myNull, myFunction.myNull, myFunction.myUndefined, myFunction.myObject, myFunction.myMath_PI, myFunction.myError);
+
+</script></body></html>
