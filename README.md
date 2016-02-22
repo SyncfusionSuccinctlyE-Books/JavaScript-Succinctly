@@ -1,0 +1,1 @@
+Code samples for JavaScript Succinctly by Cody Lindley.
